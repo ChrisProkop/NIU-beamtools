@@ -1,4 +1,3 @@
-
 import numpy as np
 import matplotlib.pyplot as plt
 import pylab as pl
@@ -9,7 +8,7 @@ __version__ = "1.0.0"
 
 
 def BD_Init():
-	params = {'backend': 'ps',
+	plt.params = {'backend': 'ps',
 	  'axes.labelsize': 25,
 	  'text.fontsize': 25,
 	  'legend.fontsize': 18,
@@ -17,22 +16,22 @@ def BD_Init():
 	  'label.size': 20,
 	  'xtick.labelsize': 20,
 	  'ytick.labelsize': 20,
-	  'subplot.wspace': 0.25,
-	  'subplot.left': 0.33,
-	  'subplot.right': 0.94,
-	  'subplot.top': 0.94,
-	  'subplot.bottom': 0.12,
-	  'subplot.hspace': 0.15,
+	  'figure.subplot.wspace': 0.25,
+	  'figure.subplot.left': 0.33,
+	  'figure.subplot.right': 0.94,
+	  'figure.subplot.top': 0.94,
+	  'figure.subplot.bottom': 0.12,
+	  'figure.subplot.hspace': 0.15,
 	  'text.usetex': False}
-	plt.rcParams.update(params)
+	plt.rcParams.update(plt.params)
 
 
-
+# CRP Note, 12-06-2013: Updated Filename and initial plot parameters.
 # CRP Note, 11-20-2013: This is an extensive modification of the original bdplotter.py, which had bloated up as more and more variants were added.  It makes proper use of default values and flags to handle exceptions, rather than having separate functions for each.
 # CRP Note, 11-22-2013: More improvements.  There is still an issue with going to zero that needs to be corrected, but it is not really noticeable on plots.
 # CRP Note, 11-22-2013: TBD-  Should offset be a value, or a fraction fo the limit of the plot?  My guess is the former, as there are circumstances where only a section of density plot is displayed.
 
-def BD_DensityPlot_ElaborateOptions(X,Y, numHexes=51, numXHistBins=51, numYHistBins=51, show_density=1, show_xcurrent=0, show_xhist=0, show_yhist=1, xhist_scale=0.3,   yhist_scale=0.3, histogram_linecode='r-', bunch_charge=0, xoffset=None, yoffset=None, density_type='log', threshold_population=0, color_scale=pl.cm.Greys):
+def BD_DensityPlot_Pro(X,Y, numHexes=51, numXHistBins=51, numYHistBins=51, show_density=1, show_xcurrent=0, show_xhist=0, show_yhist=1, xhist_scale=0.3,   yhist_scale=0.3, histogram_linecode='r-', bunch_charge=0, xoffset=None, yoffset=None, density_type='log', threshold_population=0, color_scale=pl.cm.Greys):
 
 #### Most of these variables adjust the arguments used for Matplotlib's hexbin function:  
 ##   http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.hexbin
