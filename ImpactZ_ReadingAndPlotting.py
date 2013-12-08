@@ -244,3 +244,9 @@ def plotZemit_label(fileBase,label):
 	Zp=np.loadtxt(open(fileBase+'.26'), dtype=dt)
 	plt.plot(Zp['z'],Zp['emit'],label)
 	return
+
+
+# September 5th, 2013:  Reads a 
+def ImpactZ_ReadDistribution35(distPath):
+	particleData=np.loadtxt(open(distPath), dtype=dDist)
+	return particleData
