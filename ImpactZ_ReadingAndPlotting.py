@@ -246,7 +246,8 @@ def plotZemit_label(fileBase,label):
 	return
 
 
-# September 5th, 2013:  Reads a 
-def ImpactZ_ReadDistribution35(distPath):
-	particleData=np.loadtxt(open(distPath), dtype=dDist)
+# September 5th, 2013:  Reads a "35" type Impact-Z file.  See documentation for a description.
+## Labels of the array: ['x','px','y','py','z','pz'].  Units are m and beta*gamma
+def ImpactZ_ReadDistribution35(filename):
+	particleData=np.loadtxt(open(filename), dtype=dDist)
 	return particleData
