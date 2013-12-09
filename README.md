@@ -1,14 +1,9 @@
 NIU-beamtools
-<<<<<<< HEAD
-=================
-=======
 =============
 
 Analysis, Visualization, and Data Reading tools developed for the Northern Illinois University Beam Physics group.
 
 http://www.niu.edu/nicadd/
->>>>>>> afadc69d5b62a1cca49fc22f889b7125af0c7ace
-
 
 Authors and Acknowledgements
 ==================
@@ -81,10 +76,7 @@ List of Python Files
 
 
 bdplotter_pro.py
----------------
-<<<<<<< HEAD
-This a very powerful plotting tool that gives density plots for any two components of a phase space.  Special functionality is added for time-profile phases spaces, such as 
-=======
+-------
 This a very powerful plotting tool that gives density plots for any two components of a phase space.  Special functionality is added for time-profile phases spaces, notably the current profile.
 
 
@@ -150,7 +142,6 @@ This uses standard matplotlib color scales.  brg and jet are two of the more pop
 
 
 
->>>>>>> afadc69d5b62a1cca49fc22f889b7125af0c7ace
 
 
 
@@ -159,30 +150,10 @@ List of Shell Script Files
 ===========
 
 
-Elegant_BeamlineAlpha.sh
---------------
-<<<<<<< HEAD
-
-
-
-
-Elegant_BeamlineBeta.sh
---------------
-
-Elegant_BeamlineAlpha.sh
---------------
-
 
 
 Elegant_BeamlineAlpha.sh
 --------------
-
-
-
-
-Elegant_BeamlineAlpha.sh
---------------
-=======
 Requires sddsplot
 
 Argument one is the root filename of the simulation.
@@ -200,9 +171,6 @@ Argument one is the root filename of the simulation.
 
 Argument two and argument three are additional arguments for sddsplot.  Of much use is -scales=xmin,xmax,ymin,ymax, which will set the limits for the plot.  -scales=0,0,0,0 uses the default limits.
 
-
-
->>>>>>> afadc69d5b62a1cca49fc22f889b7125af0c7ace
 
 
 
