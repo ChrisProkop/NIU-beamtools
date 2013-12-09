@@ -1,5 +1,13 @@
 NIU-beamtools
+<<<<<<< HEAD
 =================
+=======
+=============
+
+Analysis, Visualization, and Data Reading tools developed for the Northern Illinois University Beam Physics group.
+
+http://www.niu.edu/nicadd/
+>>>>>>> afadc69d5b62a1cca49fc22f889b7125af0c7ace
 
 
 Authors and Acknowledgements
@@ -74,7 +82,75 @@ List of Python Files
 
 bdplotter_pro.py
 ---------------
+<<<<<<< HEAD
 This a very powerful plotting tool that gives density plots for any two components of a phase space.  Special functionality is added for time-profile phases spaces, such as 
+=======
+This a very powerful plotting tool that gives density plots for any two components of a phase space.  Special functionality is added for time-profile phases spaces, notably the current profile.
+
+
+Most of these variables adjust the arguments used for Matplotlib's hexbin function:  
+ http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.hexbin
+
+
+X, the X values of the data set.  MANDATORY
+Y, the Y values of the data set to be plotted.  MANDATORY
+
+numHexes=51,    This is the number of bins on each side for which to perform the hexbinning.
+
+numXHistBins=51,  numYHistBins=51,    These values set the number of bins for the histogram.  Default is the same as numHexes, but there are situations where a different scale is justified. 
+numYHistBins=51
+
+show_density=1,   This parameter dictates whether to show the density plot.  By default, this is the only, as "bdplotter" is short for "beam density plotter".  There are some cases, such as current profiles, where this should be turned off.  
+
+show_xcurrent=0,  Shows the current projection on the X-axis.  Scaling is TBD.  This should not be used as an overlay to a density hexbin plot.
+
+
+show_xhist=0
+
+show_yhist=0
+
+These parameters determine whether a histogram projection is shown on the x and y axis, respectively.  
+
+
+
+xhist_scale=0.3
+
+yhist_scale=0.3
+
+These two parameters set the normalization of the histogram heights, as a fraction of the total heigth and width of the plot.  
+
+
+
+histogram_linecode='r-' 
+
+The default histograms use a red-line that displays well over the default greyscale density plot, though a different color may be useful for different color schemes.
+
+
+bunch_charge=0
+
+The default bunch charge is 0.  
+
+xoffset=0
+
+yoffset=0
+
+density_type='log'.  
+
+Log plots the density as a function log_10(i+1).  If you want a linear scale, you DO NOT enter 'linear'.  Rather, use an integer that sets the number of gradients in color (divided from max to min).  This can also be used a sequence of values that specify the range for each color.
+
+threshold_population=0.  This value is subtracted from the bin population.
+
+color_scale=pl.cm.Greys. 
+
+This uses standard matplotlib color scales.  brg and jet are two of the more popular ones, but examples of all standard color maps can be found at:  http://www.physics.ox.ac.uk/Users/msshin/science/code/matplotlib_cm/
+
+
+
+
+
+
+
+>>>>>>> afadc69d5b62a1cca49fc22f889b7125af0c7ace
 
 
 
@@ -85,6 +161,7 @@ List of Shell Script Files
 
 Elegant_BeamlineAlpha.sh
 --------------
+<<<<<<< HEAD
 
 
 
@@ -105,6 +182,27 @@ Elegant_BeamlineAlpha.sh
 
 Elegant_BeamlineAlpha.sh
 --------------
+=======
+Requires sddsplot
+
+Argument one is the root filename of the simulation.
+
+Argument two and argument three are additional arguments for sddsplot.  Of much use is -scales=xmin,xmax,ymin,ymax, which will set the limits for the plot. -scales=0,0,0,0 uses the default limits.
+
+
+
+Elegant_BeamlineBeta.sh
+--------------
+
+Requires sddsplot
+
+Argument one is the root filename of the simulation.
+
+Argument two and argument three are additional arguments for sddsplot.  Of much use is -scales=xmin,xmax,ymin,ymax, which will set the limits for the plot.  -scales=0,0,0,0 uses the default limits.
+
+
+
+>>>>>>> afadc69d5b62a1cca49fc22f889b7125af0c7ace
 
 
 
